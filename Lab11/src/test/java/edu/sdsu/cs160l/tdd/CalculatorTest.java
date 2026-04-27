@@ -2,7 +2,7 @@ package edu.sdsu.cs160l.tdd;
 
 import edu.sdsu.cs160l.calculator.Calculator;
 import edu.sdsu.cs160l.calculator.SimpleCalculator;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -25,5 +25,24 @@ public class CalculatorTest {
     //Add before each here
 
     //write test cases here
-
+    @Test
+    public void testAdd(){
+        Assert.fail("Fail");
+    }
+    @Test
+    public void testSubtract(){
+        Assert.fail("Fail");
+    }
+    @Test
+    public void testMultiply(){
+        Assert.fail("Fail");
+    }
+    @Test
+    public void testDivide(){
+        Assert.fail("Fail");
+    }
+    @Test
+    public void testDivideByZero(){
+        Assert.fail("Fail");
+    }
 }

@@ -4,4 +4,5 @@ import java.util.NoSuchElementException;
 
 //TODO implement this exception as per the bluePrint in ClassFullException
 public class NoSuchCourseException extends NoSuchElementException {
+    public NoSuchCourseException(String message) { super(message); }
 }

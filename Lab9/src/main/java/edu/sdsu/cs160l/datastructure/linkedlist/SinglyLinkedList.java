@@ -51,6 +51,19 @@ public class SinglyLinkedList {
         System.out.println();
     }
 
+    public static void printCourseList(SinglyLinkedList list)
+    {
+        Node currNode = list.head;
+        System.out.print("Courses are: ");
+        // Traversing through the LinkedList
+        while (currNode != null) {
+            System.out.print(currNode.studentName + " ");
+            currNode = currNode.next;
+        }
+
+        System.out.println();
+    }
+
     //deleting a node
     public static SinglyLinkedList deleteByKey(SinglyLinkedList list, String key)
     {
@@ -112,6 +125,16 @@ public class SinglyLinkedList {
             3. Add CS150L, CS160L
             4. Iterate through the linkedlist and print all the courses
          */
+        SinglyLinkedList courses = new SinglyLinkedList();
+        courses = insert(courses, "CS150");
+        courses = insert(courses, "CS160");
+        courses = insert(courses, "CS210");
+        printCourseList(courses);
+        courses = deleteByKey(courses, "CS150");
+        courses = deleteByKey(courses, "CS160");
+        courses = insert(courses, "CS150L");
+        courses = insert(courses, "CS160L");
+        printCourseList(courses);
         String course = "CS210";
     }
 }

@@ -28,6 +28,6 @@ public class Main {
         //with the complaint student you can
         Registrar registrar = new Registrar();
 
-        registrar.enrollStudentToClass(compliant, new CS340());
+        registrar.enrollStudentToClass(compliant, CS340.getInstance());
     }
 }

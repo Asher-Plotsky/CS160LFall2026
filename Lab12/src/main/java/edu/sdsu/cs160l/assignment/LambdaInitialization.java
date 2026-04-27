@@ -15,7 +15,7 @@ public class LambdaInitialization {
     public Operation<Float, Double> division() {
         // TODO return a lambda initialization of Operation interface that divides the 2 parameters
         //  a valid return statement has to be lambda syntax "()->"
-        return null;
+        return(x, y)-> (double) (x/y);
     }
 
     /**
@@ -26,6 +26,6 @@ public class LambdaInitialization {
         //  that takes a double and int and returns them "-" concatenated
         //  eg input 3.4, 8 return "3.4-8"
         //  a valid return statement has to be lambda syntax "()->"
-        return null;
+        return (x, y) -> x.toString() + "-" + y.toString();
     }
 }

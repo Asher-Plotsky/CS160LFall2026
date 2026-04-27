@@ -18,6 +18,23 @@ import edu.sdsu.cs160l.university.student.StudentMajor;
 public class SimpleCompStudent implements StudentStrategy {
     @Override
     public boolean isValid(Student student) {
-        return false;
+        boolean satisfiesCourseCount = student.getCoursesEnrolled().size() >= 3;
+        boolean satisfiesCourseLevel1 = false;
+        boolean satisfiesCourseLevel2 = false;
+        boolean satisfiesMajor = student.getStudentMajor() == StudentMajor.computersci || student.getStudentMajor() == StudentMajor.computereng;
+        for (Course course : student.getCoursesEnrolled()) {
+            if (course.courseName().contains("2")) {
+                satisfiesCourseLevel1 = true;
+                break;
+            }
+        }
+        for (Course course : student.getCoursesEnrolled()) {
+            if (course.courseName().contains("3")) {
+                satisfiesCourseLevel2 = true;
+                break;
+            }
+        }
+        boolean satisfiesCourseLevel = satisfiesCourseLevel1 && satisfiesCourseLevel2;
+        return satisfiesCourseLevel && satisfiesMajor && satisfiesCourseCount;
     }
 }

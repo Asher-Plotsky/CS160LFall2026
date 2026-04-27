@@ -64,6 +64,10 @@ public class AirplaneTest {
         // 1. Define the expected wheelStatus for take-off.
         // 2. Use 'doReturn' to set the desired return value for the 'getWheelStatus' method.
         // 3. Call the 'takeOff' method on the airplane object and use an Asserteqauls method to validate that the 'WheelStatus' matches your expected value.
+        WheelStatus expectedWheelStatus = new WheelStatus(true, true);
+        doReturn(expectedWheelStatus).when(wheel).getWheelStatus();
+        WheelStatus actualWheelStatus = airplane.takeOff();
+        assertEquals(expectedWheelStatus, actualWheelStatus);
 
     }
 
@@ -71,6 +75,10 @@ public class AirplaneTest {
     public void landAirplane() {
         //TODO: Implement test case to verify the land functionality of the airplane.
         // follow similar steps as above but now for the 'land' method
+        WheelStatus expectedWheelStatus = new WheelStatus(false, true);
+        doReturn(expectedWheelStatus).when(wheel).getWheelStatus();
+        WheelStatus actualWheelStatus = airplane.land();
+        assertEquals(expectedWheelStatus, actualWheelStatus);
     }
 
 

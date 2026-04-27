@@ -22,6 +22,20 @@ public class BinarySearch implements Search {
      */
     @Override
     public <T extends Comparable<? super T>> int search(List<T> list, T t) {
+        int low = 0;
+        int high = list.size()-1;
+        while (low <= high && high >= low) {
+            int mid = low + (high - low) / 2;
+            if (list.get(mid).compareTo(t) > 0) {
+                high = mid - 1;
+            }
+            else if (list.get(mid).compareTo(t) < 0) {
+                low = mid + 1;
+            }
+            else {
+                return mid;
+            }
+        }
         return -1;
     }
 }

@@ -25,7 +25,7 @@ import edu.sdsu.cs160l.university.lab5.registrar.Registrar;
 public class DesignPatternsMain {
     public static void main(String[] args) {
         //write sample code here
-    	CS160 cs160 = new CS160();
+    	CS160 cs160 = CS160.getInstance();
 //    	Registrar reg = new Registrar();
     }
 }

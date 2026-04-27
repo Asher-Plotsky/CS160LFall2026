@@ -48,7 +48,16 @@ public class ArrayExample {
         for (int num : newArray) {
             System.out.print(num + " ");
         }
+        System.out.println();
 
         //TODO: Find the index of the element 30 in the newArray and print it using a linear search algorithm Hint O(N) complexity
+        int i = 0;
+        for(int num : newArray) {
+            if (num == 30){
+                System.out.print(i);
+                break;
+            }
+            i++;
+        }
     }
 }

@@ -2,7 +2,6 @@ package edu.sdsu.cs160l.university.lab5.application;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class ScholarshipApplicationTest {
@@ -11,7 +10,7 @@ class ScholarshipApplicationTest {
     @BeforeEach
     public void init(){
         //TODO uncomment the below line and import the class ScholarShipApplication;
-        //testApplication = new ScholarshipApplication();
+        testApplication = new ScholarshipApplication();
     }
 
     @Test

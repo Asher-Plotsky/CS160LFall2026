@@ -6,6 +6,13 @@ import java.util.List;
 import java.util.Set;
 
 public class CS210 implements Course{
+    private CS210(){}
+    private static class CS210Holder{
+        private static final CS210 INSTANCE = new CS210();
+    }
+    public static CS210 getInstance(){
+        return CS210Holder.INSTANCE;
+    }
     @Override
     public String courseName() {
         return "CS210";

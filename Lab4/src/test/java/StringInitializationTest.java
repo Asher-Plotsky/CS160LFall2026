@@ -30,6 +30,8 @@ public class StringInitializationTest {
         String b = "hey";
 
         //TODO write a suitable test to check equality of these strings
+
+        System.out.println(a.equals(b));
     }
 
     @Test
@@ -38,6 +40,17 @@ public class StringInitializationTest {
         String[] b = {"java", "c++", "javascript"};
 
         //TODO write a suitable test to check equality of these string arrays
+        boolean test = true;
+        for (int i = 0; i < a.length; i++) {
+            if (!a[i].equals(b[i])) {
+                System.out.println(false);
+                test = false;
+                break;
+            }
+        }
+        if (test == true) {
+            System.out.println(true);
+        }
     }
 
     @Test
@@ -50,8 +63,8 @@ public class StringInitializationTest {
         System.out.println(data1[0] == new String(data2[0]));
 
         //TODO convert below prints to asserts
-        System.out.println(data1[0].equals(testString));
-        System.out.println(data1[0].equals(new String(testString)));
+        assert (data1[0].equals(testString));
+        assert (data1[0].equals(new String(testString)));
 
     }
 }

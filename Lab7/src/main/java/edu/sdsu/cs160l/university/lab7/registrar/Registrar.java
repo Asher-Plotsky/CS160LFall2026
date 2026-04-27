@@ -36,10 +36,14 @@ public class Registrar {
     public void enrollStudentToClass(Student student, String courseName) throws NoSuchCourseException, ClassFullException, StudentAlreadyEnrolledException {
         //TODO check if courseName is a valid courseName if not throw a new NoSuchCourseException
         // you may use the isNotValidCourse function
+        if (courseList.containsKey(courseName)) {
+            Course course = courseList.get(courseName);
+            course.addStudent(student);
+        }
+        else {
+            throw new NoSuchCourseException("No Course Titled " + courseName);
+        }
 
-
-        Course course = courseList.get(courseName);
-        course.addStudent(student);
     }
 
     /**
